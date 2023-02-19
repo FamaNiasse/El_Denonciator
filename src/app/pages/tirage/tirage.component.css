@@ -1,0 +1,27 @@
+button{
+    background: #ce0033;
+    border: none;
+    border-radius: 40px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+
+.whitebloc{
+    background: #F6F6F7;
+    width: 600px;
+    height: 154px;
+    text-align: center;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    height: 30vw;
+}

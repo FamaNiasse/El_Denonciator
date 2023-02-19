@@ -1,0 +1,34 @@
+<main>
+
+    <button type="submit" (click)="getRandomStudent()">
+        🎰 Sélectionner une personne 🎰
+    </button>
+
+    <div class="whitebloc">
+        🌸
+
+            <p>{{ result }}</p>
+            <p>{{ message }}</p>
+            
+            <!-- <span *ngIf="randomStudent?.genre === 'homme'">tu es le grand gagnant !</span>
+            <span *ngIf="randomStudent?.genre === 'femme'">tu es la grande gagnante !</span> -->
+
+
+    </div>
+
+</main>
+
+
+
+
+<!-- <p *ngIf="randomStudent; then winner else noWinner"></p>
+<ng-template #winner>
+    {{randomStudent?.prenom}} 
+
+    <span *ngIf="randomStudent?.genre === 'femme'">tu es la grande gagnante
+        !</span>
+        <span *ngIf="randomStudent?.genre === 'homme'">tu es le grand gagnant !</span>
+</ng-template>
+<ng-template #noWinner>
+    Aucun étudiant présent n'a été sélectionné.
+</ng-template> -->

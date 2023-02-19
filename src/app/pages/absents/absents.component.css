@@ -1,0 +1,43 @@
+body{
+    height: 100vh;
+}
+
+.classement{
+    display: none;
+}
+span{
+    cursor: pointer;
+    background: #ce0033;
+    color: white;
+    border-radius: 35%;
+    padding: 5px;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vw;
+
+}
+
+select{
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+}
+
+button{
+    background: #ce0033;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 90px;
+}
+
+.split{
+    border-right: 2px solid black;
+}
+

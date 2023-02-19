@@ -1,0 +1,83 @@
+<main>
+ 
+   
+
+    <form [formGroup]="absentForm">
+        <!-- Définition d'un formulaire pour ajouter un étudiant absent, avec la liaison vers le formulaire Angular absentForm -->
+
+        <h1>Ajouter un.e absent.e</h1>
+
+        <select formControlName="student">
+            <!-- Définition d'une liste déroulante pour sélectionner un étudiant absent à ajouter, avec la liaison vers la propriété student de l'objet absentForm -->
+
+
+            <option disabled selected [ngValue]="null">Selectionner absent</option>
+            <!-- Définition d'un élément de liste vide et désactivé pour la sélection, avec la valeur null liée à l'option par défaut -->
+
+            <option *ngFor="let person of student" [ngValue]="person">
+
+                <!-- Itération sur le tableau des étudiants pour afficher chaque étudiant comme option, avec la valeur liée à l'objet person -->
+
+                {{person.prenom}}
+                <!-- Affichage du prénom de l'étudiant dans chaque option de la liste déroulante -->
+
+            </option>
+        </select>
+
+        <br> <br> 
+
+        <button type="submit" (click)="addElement()">Ajouter</button>
+        <!-- Bouton de soumission pour ajouter l'étudiant absent sélectionné au formulaire, avec l'appel de la méthode addElement() lorsqu'il est cliqué -->
+    
+    </form>
+
+
+    <div class="classroom">
+
+        <div class="absents">
+            <h2>Liste des absents</h2>
+            <!-- Titre pour la liste des étudiants absents -->
+
+            <ul>
+                <!-- Élément de liste HTML pour afficher la liste des étudiants absents -->
+
+                <li *ngFor="let person of absentStudent; let index=index"
+                    [ngClass]="{'classement' : person.genre === 'femme'}">
+                    <!-- Itération sur le tableau des étudiants absents, avec la directive *ngFor pour afficher chaque étudiant dans la liste -->
+
+                    {{person.prenom}}
+                    <!-- Affichage du prénom de l'étudiant dans la liste -->
+
+                    <span (click)="removeElement(index)"> X </span> <br> <br>
+                    <!-- Bouton de suppression pour retirer l'étudiant de la liste, avec l'appel de la méthode removeElement() lorsqu'il est cliqué -->
+
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="absentes">
+            <h2>Liste des absentes</h2>
+            <!-- Titre pour la liste des étudiantes absentes -->
+
+            <ul>
+                <!-- Élément de liste HTML pour afficher la liste des étudiantes absentes -->
+
+                <li *ngFor="let person of absentStudent; let index=index"
+                    [ngClass]="{'classement' : person.genre === 'homme'}">
+                    <!-- Itération sur le tableau des étudiantes absentes, avec la directive *ngFor pour afficher chaque étudiante dans la liste -->
+
+                    {{person.prenom}}
+                    <!-- Affichage du prénom de l'étudiante dans la liste -->
+
+                    <span (click)="removeElement(index)"> X </span> <br> <br>
+                    <!-- Bouton de suppression pour retirer l'étudiante de la liste, avec l'appel de la méthode removeElement() lorsqu'il est cliqué -->
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</main>
