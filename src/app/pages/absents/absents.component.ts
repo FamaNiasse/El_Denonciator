@@ -49,8 +49,4 @@ removeElement(idStudent: number): void{
   this.absentStudent= this.studentService.getStudent()
 }
 
-
-
-
-
 }
